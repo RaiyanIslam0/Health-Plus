@@ -13,8 +13,15 @@ To use the fully functional web app just visit the link: https://lemickey-hi.ver
 
 Deployed Frontend Link: https://lemickey-hi.vercel.app
 
+- We deployed out frontend using vercel.
+
+
 
 Deployed Backend Link: https://lemickey-hi.onrender.com
+
+- We deployed are backend using render.
+
+No need to setup local environment to test this link it is already deployed, but I still provided local setup if anyone wants to test.
 
 ## Features
 
@@ -34,7 +41,7 @@ Recipe Suggestions and creation:
 Discover and log healthy recipes tailored to your goals.
 
 
-Note and remindeer:
+Note and reminder:
 To give users more usability
 
 ## Technologies Used
