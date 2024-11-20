@@ -17,11 +17,8 @@ const recipeSchema = new mongoose.Schema({
   instructions: { type: String, required: true }, // Step-by-step instructions
   ingredients: [ingredientSchema], // Array of ingredient objects
   createdAt: {
-    type: Date,
-    default: () => {
-      const today = new Date().toLocaleDateString("en-CA");
-      return new Date(today); // Convert the string back to a Date object
-    },
+    type: String,
+    default: () => new Date().toLocaleDateString("en-CA"),
   },
 });
 

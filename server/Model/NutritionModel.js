@@ -20,11 +20,8 @@ const NutritionSchema = new mongoose.Schema({
     required: true,
   },
   date: {
-    type: Date,
-    default: () => {
-      const today = new Date().toLocaleDateString("en-CA");
-      return new Date(today); // Convert the string back to a Date object
-    },
+    type: String,
+    default: () => new Date().toLocaleDateString("en-CA"),
   },
 });
 
