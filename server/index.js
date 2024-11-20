@@ -4,7 +4,7 @@ const cors = require("cors");
 const env = require("env2")("./.env");
 const fs = require("fs");
 const path = require("path");
-const port = process.env.PORT || 8083;
+const port = process.env.PORT || 3000;
 //config - db.js
 
 const { connection } = require("./config/db.js");
@@ -63,9 +63,9 @@ app.use("/users", userRouter);
 app.use(auth);
 
 
-app.listen(port, "localhost", async () => {
+app.listen(PORT, async () => {
   try {
-    console.log("listening on port " + port);
+    console.log("listening on port " + PORT);
     console.log("connecting to MongoDB Atlas...");
     await connection;
     console.log("connected to MongoDB Atlas...");
