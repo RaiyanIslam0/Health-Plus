@@ -19,8 +19,8 @@ const recipeSchema = new mongoose.Schema({
   createdAt: {
     type: Date,
     default: () => {
-      const now = new Date();
-      return new Date(now.getTime() - now.getTimezoneOffset() * 60000);
+      const today = new Date().toLocaleDateString("en-CA");
+      return new Date(today); // Convert the string back to a Date object
     },
   },
 });
