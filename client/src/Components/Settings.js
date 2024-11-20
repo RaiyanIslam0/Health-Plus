@@ -34,48 +34,47 @@ const Settings = () => {
   const toast = useToast();
 
   const activityLevels = [
-    "Sedentary",
-    "Lightly Active",
-    "Moderately Active",
-    "Very Active",
-    "Super Active",
+    "sedentary",
+    "lightlyActive",
+    "moderatelyActive",
+    "veryActive",
+    "superActive",
   ];
 
-  const getUserIdFromToken = (token) => {
-    try {
-      if (!token) throw new Error("Token is missing");
-      const decoded = jwtDecode(token);
-      return decoded.userID;
-    } catch (error) {
-      console.error("Error decoding token:", error.message);
-      return null;
-    }
-  };
-
-  // Fetch the user data when the component is mounted
   useEffect(() => {
     const fetchUserData = async () => {
       const token = localStorage.getItem("token");
       if (!token) {
         console.error("No token found. User might not be logged in.");
+        setLoading(false);
         return;
       }
-
-      const userId = getUserIdFromToken(token);
 
       try {
         const response = await axios.get(
           "https://lemickey-hi.onrender.com/users/details",
           {
-            headers: { Authorization: `Bearer ${token}` },
+            headers: {
+              Authorization: `Bearer ${token}`,
+            },
           }
         );
-        setUser(response.data);
+
+        if (response.status === 200) {
+           setUser(response.data);
+           console.log(
+             "settings: " + JSON.stringify(user.activityLevel)
+           );
+        } else {
+          console.error("Failed to fetch user details:", response.statusText);
+        }
       } catch (error) {
-        setErrorMessage("Failed to fetch user details");
+        console.error("Error fetching user details:", error.message);
+      } finally {
+        setLoading(false);
       }
     };
-    fetchUserData();
+        fetchUserData();
   }, []);
 
   // Handle form submission
