@@ -128,7 +128,8 @@ const UserInfoCard = () => {
       boxShadow="rgba(0, 0, 0, 0.12) 0px 4px 12px"
       width={"100%"}
       bg="white"
-      height="50vh"
+      // height="50vh"
+      height="100%"
     >
       <CardBody>
         {/* Name and Badge */}

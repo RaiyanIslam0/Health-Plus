@@ -139,13 +139,22 @@ const FoodExerciseCard = () => {
 
   return (
     <Box
-      p={6}
-      bg="gray.50"
-      borderRadius="md"
-      boxShadow="lg"
-      width="88vh"
-      maxW="1200px"
-      mx="auto"
+      // p={6}
+      // bg="gray.50"
+      // borderRadius="md"
+      // boxShadow="lg"
+      // width="88vh"
+      // maxW="1200px"
+      // mx="auto"
+      pl="4"
+      pr="4"
+      pb="3"
+      borderRadius={"4"}
+      minH={"30vh"}
+      boxShadow="rgba(0, 0, 0, 0.24) 0px 3px 8px"
+      width={"100%"}
+      h="auto"
+      bg="white"
     >
       {isLoading && (
         <Flex justify="center" align="center" height="200px">

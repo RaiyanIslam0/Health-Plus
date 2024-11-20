@@ -18,7 +18,8 @@ const CalendarBox = () => {
       bg="white"
       borderRadius="12px"
       w="49vh"
-      height="50vh"
+      // height="50vh"
+      height="100%"
       display="flex"
       flexDirection="column"
       justifyContent="center" // Centers vertically

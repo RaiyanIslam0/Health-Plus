@@ -131,7 +131,8 @@ const NoteCard = () => {
       bg="white"
       width="100%"
       p={4}
-      height="50vh"
+      // height="50vh"
+      height="100%"
     >
       <Flex justify="space-between" align="stretch" mt={6} width="100%">
         {/* FoodTrackerModal */}
