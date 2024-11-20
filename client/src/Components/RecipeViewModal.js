@@ -34,8 +34,6 @@ const RecipeViewModal = ({ recipeId }) => {
   const [error, setError] = useState("");
   const [userId, setUserId] = useState("");
 
-  
-
   // Fetch recipe data for editing when modal is opened
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -44,12 +42,12 @@ const RecipeViewModal = ({ recipeId }) => {
     } else {
       console.log("No token found. User might not be logged in.");
     }
-    
+
     if (recipeId) {
       axios
-        .get(`http://localhost:8083/recipe/${recipeId}`, {
+        .get(`https://lemickey-hi.onrender.com/recipe/${recipeId}`, {
           headers: {
-            "x-user-id": userId, 
+            "x-user-id": userId,
           },
         })
         .then((response) => {
@@ -117,7 +115,7 @@ const RecipeViewModal = ({ recipeId }) => {
 
     try {
       const response = await axios.put(
-        `http://localhost:8083/recipe/${recipeId}`,
+        `https://lemickey-hi.onrender.com/recipe/${recipeId}`,
         {
           name,
           category,

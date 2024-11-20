@@ -40,7 +40,7 @@ const MacronutrientChart = () => {
         console.log("User ID:", userId);
 
         const userResponse = await axios.get(
-          "http://localhost:8083/users/details",
+          "https://lemickey-hi.onrender.com/users/details",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -79,7 +79,7 @@ const MacronutrientChart = () => {
         });
 
         const nutritionResponse = await axios.get(
-          `http://localhost:8083/nutritionMine/date/check/now`,
+          `https://lemickey-hi.onrender.com/nutritionMine/date/check/now`,
           {
             headers: {
               "x-user-id": userId,
@@ -88,9 +88,8 @@ const MacronutrientChart = () => {
           }
         );
 
-        const nutritionData = nutritionResponse.data;
+        // const nutritionData = nutritionResponse.data;
         console.log("calorie " + nutritionResponse.data);
-
 
         const totalNutrition = nutritionResponse.data.reduce(
           (totals, item) => ({

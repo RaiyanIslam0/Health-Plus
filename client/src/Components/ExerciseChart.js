@@ -50,7 +50,7 @@ const ExerciseChart = () => {
 
       try {
         const response = await axios.get(
-          "http://localhost:8083/users/details",
+          "https://lemickey-hi.onrender.com/users/details",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -80,7 +80,7 @@ const ExerciseChart = () => {
       const today = new Date().toLocaleDateString("en-CA");
       try {
         const response = await axios.get(
-          "http://localhost:8083/exerciseMine/date",
+          "https://lemickey-hi.onrender.com/exerciseMine/date",
           {
             headers: { "x-user-id": userId },
             params: { date: today },

@@ -15,7 +15,6 @@ import {
 import DashFoodTrackerModal from "./DashFoodTrackerModal";
 import ExerciseTrackerModal from "./ExerciseTrackerModal";
 import { jwtDecode } from "jwt-decode";
-import { FaListAlt } from "react-icons/fa";
 
 const NoteCard = () => {
   const [note, setNote] = useState("");
@@ -52,7 +51,7 @@ const NoteCard = () => {
       try {
         const userId = getUserIdFromToken(token);
         const response = await axios.get(
-          `http://localhost:8083/noteMine/${date}`,
+          `https://lemickey-hi.onrender.com/noteMine/${date}`,
           {
             headers: {
               "x-user-id": userId,
@@ -80,7 +79,7 @@ const NoteCard = () => {
     try {
       const userId = getUserIdFromToken(token);
       const response = await axios.post(
-        "http://localhost:8083/noteMine",
+        "https://lemickey-hi.onrender.com/noteMine",
         {
           date,
           note,

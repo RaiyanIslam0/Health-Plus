@@ -8,7 +8,7 @@
 
 // //   const handleSearch = async () => {
 // //     console.log(process.env.REACT_APP_BACKEND_KEY);
-// //     const response = await axios.post(" http://localhost:8083/food/search", {
+// //     const response = await axios.post(" https://lemickey-hi.onrender.com/food/search", {
 // //       query,
 // //     });
 // //     setResults(response.data);
@@ -51,4 +51,3 @@
 // };
 
 // export default SearchFood;
-

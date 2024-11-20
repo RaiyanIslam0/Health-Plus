@@ -15,7 +15,6 @@ import {
   ModalCloseButton,
   useDisclosure,
 } from "@chakra-ui/react";
-import { FaListAlt } from "react-icons/fa";
 
 const ExerciseTrackerModal = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -25,10 +24,10 @@ const ExerciseTrackerModal = () => {
   const [userId, setUserId] = useState("");
 
   // Get current date in YYYY-MM-DD format
-  const getCurrentDate = () => {
-    const today = new Date();
-    return today.toISOString().split("T")[0]; // Format: YYYY-MM-DD
-  };
+  // const getCurrentDate = () => {
+  //   const today = new Date();
+  //   return today.toISOString().split("T")[0]; // Format: YYYY-MM-DD
+  // };
 
   const getUserIdFromToken = (token) => {
     try {
@@ -82,11 +81,15 @@ const ExerciseTrackerModal = () => {
 
   const handleAddExercise = async () => {
     try {
-      await axios.post("http://localhost:8083/exerciseMine", results, {
-        headers: {
-          "x-user-id": userId, // Replace with the actual user ID
-        },
-      });
+      await axios.post(
+        "https://lemickey-hi.onrender.com/exerciseMine",
+        results,
+        {
+          headers: {
+            "x-user-id": userId, // Replace with the actual user ID
+          },
+        }
+      );
       alert("Exercise data successfully added to the database!");
       setResults([]); // Clear the results after successful addition
     } catch (error) {

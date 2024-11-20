@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import RecipeModal from "./RecipeModal";
 import RecipeViewModal from "./RecipeViewModal";
-import { Button } from "@mui/material";
 import { jwtDecode } from "jwt-decode";
 
 const RecipeLookup = () => {
@@ -49,11 +48,14 @@ const RecipeLookup = () => {
       console.log("User ID:", userId);
 
       // Make the GET request to fetch recipe data
-      const response = await axios.get(`http://localhost:8083/recipe`, {
-        headers: {
-          "x-user-id": userId, // Pass user ID as a header
-        },
-      });
+      const response = await axios.get(
+        `https://lemickey-hi.onrender.com/recipe`,
+        {
+          headers: {
+            "x-user-id": userId, // Pass user ID as a header
+          },
+        }
+      );
 
       if (response.status === 200) {
         const recipeData = response.data;
@@ -100,7 +102,7 @@ const RecipeLookup = () => {
 
       // Make the DELETE request to the backend
       const response = await axios.delete(
-        `http://localhost:8083/recipe/${recipeIdToDelete}`,
+        `https://lemickey-hi.onrender.com/recipe/${recipeIdToDelete}`,
         {
           headers: {
             "x-user-id": userId, // Pass user ID in header
@@ -274,4 +276,3 @@ const RecipeLookup = () => {
 };
 
 export default RecipeLookup;
-

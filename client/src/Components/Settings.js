@@ -8,7 +8,6 @@ import {
   Select,
   Stack,
   Text,
-  Spinner,
   Alert,
   AlertIcon,
   useToast,
@@ -66,7 +65,7 @@ const Settings = () => {
 
       try {
         const response = await axios.get(
-          "http://localhost:8083/users/details",
+          "https://lemickey-hi.onrender.com/users/details",
           {
             headers: { Authorization: `Bearer ${token}` },
           }
@@ -95,7 +94,7 @@ const Settings = () => {
       }
 
       const response = await axios.put(
-        "http://localhost:8083/users/update",
+        "https://lemickey-hi.onrender.com/users/update",
         updatedUser,
         {
           headers: { Authorization: `Bearer ${token}` },

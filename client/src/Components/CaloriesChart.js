@@ -40,7 +40,7 @@ const CaloriesChart = () => {
         console.log("User ID:", userId);
 
         const response = await axios.get(
-          "http://localhost:8083/users/details",
+          "https://lemickey-hi.onrender.com/users/details",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -91,7 +91,7 @@ const CaloriesChart = () => {
         });
 
         const nutritionResponse = await axios.get(
-          `http://localhost:8083/nutritionMine/date/check/now`,
+          `https://lemickey-hi.onrender.com/nutritionMine/date/check/now`,
           {
             headers: {
               "x-user-id": userId,

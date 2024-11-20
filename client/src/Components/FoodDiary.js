@@ -62,13 +62,13 @@ const FoodDiary = () => {
       console.log("User ID:", userId);
 
       // Get today's date in the format YYYY-MM-DD
-      const date = new Date().toISOString().split("T")[0];
+      // const date = new Date().toISOString().split("T")[0];
       const today = new Date().toLocaleDateString("en-CA");
 
       // Make API request to fetch exercises for the current date
       //date
       const response = await axios.get(
-        `http://localhost:8083/exerciseMine/date?date=${today}`,
+        `https://lemickey-hi.onrender.com/exerciseMine/date?date=${today}`,
         {
           headers: {
             "x-user-id": userId, // Replace with the actual user ID
@@ -140,7 +140,7 @@ const FoodDiary = () => {
 
       // Make the DELETE request to the backend
       const response = await axios.delete(
-        `http://localhost:8083/exerciseMine/${exerciseIdToDelete}`,
+        `https://lemickey-hi.onrender.com/exerciseMine/${exerciseIdToDelete}`,
         {
           headers: {
             "x-user-id": userId, // Replace with the actual user ID
@@ -186,11 +186,14 @@ const FoodDiary = () => {
       console.log("User ID:", userId);
 
       // Fetch user details from the backend
-      const response = await axios.get("http://localhost:8083/users/details", {
-        headers: {
-          Authorization: `Bearer ${token}`, // Send token for authentication
-        },
-      });
+      const response = await axios.get(
+        "https://lemickey-hi.onrender.com/users/details",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, // Send token for authentication
+          },
+        }
+      );
 
       if (response.status === 200) {
         const userDetails = response.data;
@@ -207,7 +210,8 @@ const FoodDiary = () => {
           superactive: 600,
         };
 
-        const caloriesBurned = activityFactors[activityLevel.toLowerCase()] || 0;
+        const caloriesBurned =
+          activityFactors[activityLevel.toLowerCase()] || 0;
 
         // Update the dailyGoal state
         const updatedDailyGoal = {
@@ -239,7 +243,6 @@ const FoodDiary = () => {
     handleAddExercise();
   }, []); // Runs only once when the component mounts
 
-
   const getUserIdFromToken = (token) => {
     try {
       if (!token) throw new Error("Token is missing");
@@ -268,7 +271,7 @@ const FoodDiary = () => {
 
       // Make the GET request to fetch nutrition data
       const response = await axios.get(
-        `http://localhost:8083/nutritionMine/mealDate/${mealType}?date=${formattedDate}`,
+        `https://lemickey-hi.onrender.com/nutritionMine/mealDate/${mealType}?date=${formattedDate}`,
         {
           headers: {
             "x-user-id": userId, // Replace with the actual user ID
@@ -332,7 +335,7 @@ const FoodDiary = () => {
 
       // Make the DELETE request to the backend
       const response = await axios.delete(
-        `http://localhost:8083/nutritionMine/${foodIdToDelete}`,
+        `https://lemickey-hi.onrender.com/nutritionMine/${foodIdToDelete}`,
         {
           headers: {
             "x-user-id": userId, // Replace with the actual user ID

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import {
   Box,
@@ -11,13 +11,9 @@ import {
   Spinner,
   Icon,
   Stack,
-  Tooltip,
   Button,
-  useBreakpointValue,
 } from "@chakra-ui/react";
 import { jwtDecode } from "jwt-decode";
-import DashFoodTrackerModal from "./DashFoodTrackerModal";
-import ExerciseTrackerModal from "./ExerciseTrackerModal";
 import { FaUtensils, FaDumbbell } from "react-icons/fa"; // Importing icons
 
 // Mock function to simulate token decoding
@@ -41,7 +37,7 @@ const getCurrentMealType = () => {
 };
 
 const FoodExerciseCard = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
   const [foodData, setFoodData] = useState({
     breakfast: [],
     lunch: [],
@@ -69,7 +65,7 @@ const FoodExerciseCard = () => {
       });
 
       const response = await axios.get(
-        `http://localhost:8083/nutritionMine/mealDate/${mealType}?date=${formattedDate}`,
+        `https://lemickey-hi.onrender.com/nutritionMine/mealDate/${mealType}?date=${formattedDate}`,
         {
           headers: {
             "x-user-id": userId,
@@ -105,7 +101,7 @@ const FoodExerciseCard = () => {
       const today = new Date().toLocaleDateString("en-CA");
 
       const response = await axios.get(
-        `http://localhost:8083/exerciseMine/date?date=${today}`,
+        `https://lemickey-hi.onrender.com/exerciseMine/date?date=${today}`,
         {
           headers: {
             "x-user-id": userId,

@@ -1,5 +1,4 @@
 import {
-  Alert,
   Box,
   Button,
   Container,
@@ -35,7 +34,7 @@ import "@fontsource/manrope";
 import { Checkbox } from "@chakra-ui/react";
 
 //*  Signup Page begins here
-let url = "http://localhost:8083/";
+let url = "https://lemickey-hi.onrender.com/";
 const SignUpPage = () => {
   const InitialState = {
     name: "",
@@ -381,11 +380,9 @@ const SignUpPage = () => {
 
             <br />
             <br />
-
           </Box>
         </form>
       </Box>
-
     </div>
   );
 };

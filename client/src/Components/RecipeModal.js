@@ -47,30 +47,30 @@ const RecipeModal = () => {
     setIngredients(ingredients.filter((_, i) => i !== index));
   };
 
-   const getUserIdFromToken = (token) => {
-     try {
-       if (!token) throw new Error("Token is missing");
-       const decoded = jwtDecode(token);
-       return decoded.userID;
-     } catch (error) {
-       console.error("Error decoding token:", error.message);
-       return null;
-     }
-   };
+  const getUserIdFromToken = (token) => {
+    try {
+      if (!token) throw new Error("Token is missing");
+      const decoded = jwtDecode(token);
+      return decoded.userID;
+    } catch (error) {
+      console.error("Error decoding token:", error.message);
+      return null;
+    }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
 
-     const token = localStorage.getItem("token");
-     console.log("token " + token);
-     if (token) {
-       setUserId(getUserIdFromToken(token));
-     } else {
-       console.log("No token found. User might not be logged in.");
-     }
+    const token = localStorage.getItem("token");
+    console.log("token " + token);
+    if (token) {
+      setUserId(getUserIdFromToken(token));
+    } else {
+      console.log("No token found. User might not be logged in.");
+    }
 
-     console.log(userId)
+    console.log(userId);
 
     // Validation
     if (
@@ -86,7 +86,7 @@ const RecipeModal = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8083/recipe",
+        "https://lemickey-hi.onrender.com/recipe",
         {
           name,
           category,

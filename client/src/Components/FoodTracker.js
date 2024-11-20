@@ -62,11 +62,15 @@ const FoodTracker = () => {
         meal_type: mealType,
       };
 
-      await axios.post("http://localhost:8083/nutritionMine", foodData, {
-        headers: {
-          "x-user-id": userId,
-        },
-      });
+      await axios.post(
+        "https://lemickey-hi.onrender.com/nutritionMine",
+        foodData,
+        {
+          headers: {
+            "x-user-id": userId,
+          },
+        }
+      );
 
       alert(`${food.food_name} added to ${mealType}!`);
     } catch (error) {
@@ -247,4 +251,3 @@ const FoodTracker = () => {
 };
 
 export default FoodTracker;
-

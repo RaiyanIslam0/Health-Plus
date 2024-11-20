@@ -29,7 +29,7 @@ const UserInfoCard = () => {
 
       try {
         const response = await axios.get(
-          "http://localhost:8083/users/details",
+          "https://lemickey-hi.onrender.com/users/details",
           {
             headers: {
               Authorization: `Bearer ${token}`,

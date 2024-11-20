@@ -60,7 +60,7 @@ const FoodTrackerModal = () => {
 
   const handleAddToDailyNutrition = async (food) => {
     const token = localStorage.getItem("token");
-    console.log("token "+token);
+    console.log("token " + token);
     if (token) {
       setUserId(getUserIdFromToken(token));
     } else {
@@ -80,11 +80,15 @@ const FoodTrackerModal = () => {
         meal_type: mealType,
       };
 
-      await axios.post("http://localhost:8083/nutritionMine", foodData, {
-        headers: {
-          "x-user-id": userId,
-        },
-      });
+      await axios.post(
+        "https://lemickey-hi.onrender.com/nutritionMine",
+        foodData,
+        {
+          headers: {
+            "x-user-id": userId,
+          },
+        }
+      );
 
       alert(`${food.food_name} added to ${mealType}!`);
     } catch (error) {
