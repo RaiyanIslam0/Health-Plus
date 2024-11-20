@@ -59,8 +59,6 @@ const FoodDiary = () => {
 
     try {
       const userId = getUserIdFromToken(token); // Extract user ID from token
-      console.log("User ID:", userId);
-
       // Get today's date in the format YYYY-MM-DD
       // const date = new Date().toISOString().split("T")[0];
       const today = new Date().toLocaleDateString("en-CA");

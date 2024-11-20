@@ -16,7 +16,13 @@ const recipeSchema = new mongoose.Schema({
   cuisine: { type: String, required: true }, // e.g., Indian
   instructions: { type: String, required: true }, // Step-by-step instructions
   ingredients: [ingredientSchema], // Array of ingredient objects
-  createdAt: { type: Date, default: Date.now },
+  createdAt: {
+    type: Date,
+    default: () => {
+      const now = new Date();
+      return new Date(now.getTime() - now.getTimezoneOffset() * 60000);
+    },
+  },
 });
 
 const recipeModel = mongoose.model("Recipe", recipeSchema);

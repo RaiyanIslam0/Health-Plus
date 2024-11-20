@@ -19,7 +19,13 @@ const NutritionSchema = new mongoose.Schema({
     enum: ["breakfast", "lunch", "dinner", "snack"],
     required: true,
   },
-  date: { type: Date, default: Date.now }, // Reflects when the food was logged
+  date: {
+    type: Date,
+    default: () => {
+      const now = new Date();
+      return new Date(now.getTime() - now.getTimezoneOffset() * 60000);
+    },
+  },
 });
 
 

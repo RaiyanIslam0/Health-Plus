@@ -36,8 +36,8 @@ const FoodTrackerModal = () => {
         { query },
         {
           headers: {
-            "x-app-id": "6581ce03",
-            "x-app-key": "a70efdad091c87b626984fd4e8017004",
+            "x-app-id": process.env.REACT_APP_NUTRITIONIX_APP_ID,
+            "x-app-key": process.env.REACT_APP_NUTRITIONIX_APP_KEY,
           },
         }
       );
