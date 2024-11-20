@@ -1,0 +1,481 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.food-diary {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+.meal-section h3{
+  text-align: left;
+  margin-top: 40px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.meal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.meal-table th,
+.meal-table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.meal-table th {
+  background-color: #f2f2f2;
+}
+
+.total-row {
+  font-weight: bold;
+  background-color: #f9f9f9;
+  /* Light gray for distinction */
+}
+
+.delete-food-button {
+  padding: 10px 15px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-food-button:hover {
+  background-color: #c0392b;
+}
+
+.note-food-card {
+  width: "200px";
+}
+
+.add-food-button {
+  /* padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; */
+  float: left;
+}
+
+.add-food-button:hover {
+  background-color: #62be66;
+}
+
+
+
+.totals {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h3 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+.totals-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.totals-table th,
+.totals-table td {
+  padding: 12px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+.totals-table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+  color: #34495e;
+}
+
+.totals-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.totals-table td {
+  font-size: 1.1em;
+}
+
+.totals-table tr td:first-child {
+  font-weight: bold;
+  background-color: #ecf0f1;
+}
+
+.totals-table td:nth-child(2),
+.totals-table td:nth-child(3),
+.totals-table td:nth-child(4),
+.totals-table td:nth-child(5),
+.totals-table td:nth-child(6),
+.totals-table td:nth-child(7) {
+  color: #34495e;
+}
+
+.totals-table tr:hover {
+  background-color: #f2f2f2;
+}
+
+
+/* Styling for the recipe section container */
+.recipe-section {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section title */
+.recipe-section h3 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: #333;
+  text-align: center;
+}
+
+/* Recipe table styling */
+.recipe-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* Table headers */
+.recipe-table th {
+  background-color: #4caf50;
+  color: white;
+  text-align: left;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+/* Table rows */
+.recipe-table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternate row coloring for better readability */
+.recipe-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Add and delete buttons */
+.add-recipe-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px 0;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button {
+  background-color: #ff4d4d;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #e60000;
+}
+
+/* Button hover effects */
+.add-recipe-button:hover {
+  background-color: #45a049;
+}
+
+/* Center the total calorie count */
+.recipe-section div {
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: right;
+  color: #333;
+}
+
+
+.exercise-section {
+  margin: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.add-exercise-button {
+  background-color: teal;
+  color: white;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.add-exercise-button:hover {
+  background-color: rgb(13, 91, 91);
+}
+
+.add-exercise-button-second {
+  background-color: rgb(178, 51, 149);
+  color: white;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.add-exercise-button-second:hover {
+  background-color: rgb(105, 18, 85);
+}
+
+.exercise-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.exercise-table th,
+.exercise-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.exercise-table th {
+  background-color: #f2f2f2;
+  color: #555;
+}
+
+.exercise-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.delete-exercise-button {
+  background-color: #ff4d4d;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.delete-exercise-button:hover {
+  background-color: #e60000;
+}
+
+.exercise-info {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.food-tracker-container {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.food-tracker-header {
+  font-size: 28px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.food-tracker-form {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.food-tracker-form input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 70%;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.food-tracker-form button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.food-tracker-form button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Error message */
+.error-message {
+  text-align: center;
+  color: red;
+}
+
+/* Nutrition Info Table */
+.nutrition-table {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.nutrition-table th,
+.nutrition-table td {
+  padding: 12px 15px;
+  text-align: left;
+}
+
+.nutrition-table th {
+  background-color: #2d3b48;
+  color: white;
+  font-size: 18px;
+}
+
+.nutrition-table td {
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.nutrition-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.nutrition-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Portion Size and Meal Type Controls */
+.controls {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.controls label {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.controls input[type="number"],
+.controls select {
+  padding: 10px;
+  font-size: 16px;
+  margin-left: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.add-to-daily-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.add-to-daily-button:hover {
+  background-color: #45a049;
+}
+
+.exercise-result {
+  text-align: center;
+}
+
+/* Custom calendar styling */
+.custom-calendar {
+  border: none;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+  border-radius: 8px;
+}
+
+/* Highlight the selected date */
+.selected-date {
+  background-color: #5298da !important;
+  /* Chakra teal.500 */
+  color: white !important;
+  border-radius: 50%;
+  /* Circular highlight */
+}
