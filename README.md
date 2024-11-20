@@ -1,0 +1,77 @@
+LeMickey
+The Ultimate Health and Wellness App
+
+
+Overview
+
+This Project Focuses on making a user friendly application for meal logging, calorie + macronutrient tracking, meal planning, and daily progress monitoring. Since with each day there is a rise in health-conscious lifestyles, the need for tools that enable users to easily log their meals, monitor their nutritional intake, and set dietary goals tailored to their health and fitness objectives also will increase by the same margin. Although many apps already exist in this space, there are usually bad and also added with a non intuitive interface, really high subscription costs, or the just won't offer a comprehensive set of features like this project: Easy Meal Logging, Calorie/Macros Tracking, Simple Meal Planner, Recipe Storage + Creation, Nutrient Insights, Progress Tracking and Finally Daily Reminders all in one place. The aim of this project is to simplify the user experience while at the same time being able to provide all necessary features in a simple and great platform.
+
+Webapp access:
+
+To use the fully functional web app just visit the link https://lemickey-hi.vercel.app
+
+Deployed Frontend Link: https://lemickey-hi.vercel.app
+Deployed Backend Link: https://lemickey-hi.onrender.com
+
+Features
+
+User Registration and Authentication:
+Users can register, log in, and securely manage their accounts.
+Nutrition Tracking:
+Add and monitor daily food intake with detailed nutritional data.
+Exercise Logging:
+Search and log exercises with automatic calorie burn calculations.
+Recipe Suggestions and creation:
+Discover and log healthy recipes tailored to your goals.
+Note and remindeer:
+To give users more usability
+
+
+Frontend:
+React, Chakra UI
+Backend:
+Node.js, Express.js
+Database:
+MongoDB
+APIs:
+nutritionix API, theMealDB API
+State Management:
+Redux
+Routing:
+React Router
+Setup and Installation
+
+Prerequisites
+Node.js and npm installed.
+MongoDB server running locally or in the cloud.
+Steps to Run Locally
+Clone the repository:
+git clone https://github.com/yourusername/your-repo.git
+Navigate to the project directory:
+cd your-repo
+Install dependencies:
+npm install
+Set up environment variables:
+Create a .env file in the root directory with the following variables:
+PORT=5000
+MONGODB_URI=your_mongodb_connection_string
+NUTRITION_API_KEY=your_api_key
+EXERCISE_API_KEY=your_api_key
+RECIPE_API_KEY=your_api_key
+Start the development server:
+npm start
+Open your browser and navigate to http://localhost:3000.
+
+
+How to Use
+
+Sign Up/Log In:
+Register as a new user or log in to your account.
+Track Nutrition:
+Add meals or ingredients to calculate nutritional intake.
+Log Exercises:
+Search for exercises and track calories burned.
+Discover Recipes and also create:
+Browse recipes and add them to your daily log.
+
+Note: Sometimes some features take two clicks to add so if the error pops up it just some state managment issue when we deployed however, if you click it the second time it will work. For example, when adding food you most likely will need to click Add to {meal} twice.
