@@ -63,9 +63,20 @@ app.use("/users", userRouter);
 app.use(auth);
 
 
-app.listen(PORT, async () => {
+// app.listen(port, "localhost", async () => {
+//   try {
+//     console.log("listening on port " + port);
+//     console.log("connecting to MongoDB Atlas...");
+//     await connection;
+//     console.log("connected to MongoDB Atlas...");
+//   } catch (err) {
+//     console.log("The error while connecting to MongoDB Atlas", err);
+//   }
+// });
+
+app.listen(port, async () => {
   try {
-    console.log("listening on port " + PORT);
+    console.log("listening on port " + port);
     console.log("connecting to MongoDB Atlas...");
     await connection;
     console.log("connected to MongoDB Atlas...");
